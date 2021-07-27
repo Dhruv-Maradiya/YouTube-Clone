@@ -1,0 +1,271 @@
+.header {
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 15px 10px 15px;
+  .header__left {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    .header__logo {
+      height: 25px;
+      object-fit: contain;
+      margin-left: 10px;
+    }
+  }
+  .header__input {
+    display: flex;
+    align-items: center;
+    .header__inputArea {
+      display: flex;
+      align-items: center;
+      border: 1px solid lightgray;
+      .header__inputButton {
+        width: 50px !important;
+        background-color: #fafafa;
+        border-left: 1px solid lightgray;
+        color: gray;
+      }
+      input {
+        flex: 1;
+        border: none;
+        outline: none;
+        padding: 5px 0px 5px 12px;
+        width: 30vw;
+        max-width: 560px;
+      }
+    }
+    .header__mic {
+      margin-left: 6px;
+      color: gray;
+    }
+  }
+  .header__icons {
+    display: flex;
+    align-items: center;
+    .header__icon {
+      color: gray;
+    }
+    .header__Avatar {
+      margin-left: 6px;
+    }
+  }
+}
+@media only screen and (min-width: 330px) and (max-width: 8000px) {
+  .header {
+    .header__input {
+      display: flex !important;
+    }
+  }
+}
+@media only screen and (min-width: 560px) and (max-width: 800px) {
+  .header {
+    padding: 5px 10px 5px 10px;
+    .header__left {
+      .header__logo {
+        height: 20px;
+        margin-left: 0px;
+      }
+      .header__menuIcon {
+        font-size: 1.2rem !important;
+      }
+    }
+    .header__input {
+      display: flex !important;
+      .header__inputArea {
+        .header__inputButton {
+          width: 40px !important;
+          font-size: 1.2rem !important;
+        }
+        input {
+          height: 23px;
+          padding: 4px 0px 4px 8px;
+        }
+      }
+      .header__mic {
+        font-size: 1.2rem !important;
+        margin-left: 0px;
+      }
+    }
+    .header__icons {
+      .header__icon {
+        font-size: 1.2rem !important;
+      }
+      .header__Avatar {
+        width: 30px !important;
+        height: 30px !important;
+      }
+      .header__iconButton {
+        padding: 8px !important;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 560px) and (max-width: 800px) {
+  .header {
+    padding: 5px 10px 5px 10px;
+    .header__left {
+      .header__logo {
+        height: 20px;
+        margin-left: 0px;
+      }
+      .header__menuIcon {
+        font-size: 1.2rem !important;
+      }
+    }
+    .header__input {
+      display: flex !important;
+      .header__inputArea {
+        .header__inputButton {
+          width: 40px !important;
+          font-size: 1.2rem !important;
+        }
+        input {
+          height: 23px;
+          padding: 4px 0px 4px 8px;
+        }
+      }
+      .header__mic {
+        font-size: 1.2rem !important;
+        margin-left: 0px;
+      }
+    }
+    .header__icons {
+      .header__icon {
+        font-size: 1.2rem !important;
+      }
+      .header__Avatar {
+        width: 30px !important;
+        height: 30px !important;
+      }
+      .header__iconButton {
+        padding: 8px !important;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 460px) and (max-width: 559px) {
+  .header {
+    padding: 5px 7px 5px 7px;
+    .header__left {
+      .header__logo {
+        height: 15px;
+        margin-left: 0px;
+      }
+      .header__menuIcon {
+        font-size: 1rem !important;
+      }
+    }
+    .header__input {
+      display: flex !important;
+      .header__inputArea {
+        height: 25px;
+        input {
+          height: 20px;
+          padding: 0px 0px 0px 5px;
+          font-size: 0.7rem;
+        }
+        .header__inputButton {
+          font-size: 1rem !important;
+          width: 40px !important;
+          // height: 100%;
+        }
+      }
+      .header__mic {
+        margin-left: 0px;
+        font-size: 1.1rem;
+      }
+    }
+    .header__icons {
+      .header__icon {
+        font-size: 1rem !important;
+      }
+      .header__Avatar {
+        width: 25px !important;
+        height: 25px !important;
+      }
+    }
+    .MuiIconButton-root {
+      padding: 8px !important;
+    }
+  }
+}
+@media only screen and (min-width: 330px) and (max-width: 459px) {
+  .header {
+    padding: 5px 7px 5px 7px;
+    .header__left {
+      margin-right: 6px;
+      .header__logo {
+        height: 12px;
+        margin-left: 0px;
+      }
+      .header__menuIcon {
+        font-size: 0.8rem !important;
+      }
+    }
+    .header__input {
+      display: flex !important;
+      .header__inputArea {
+        height: 20px;
+        input {
+          height: 18px;
+          padding: 0px 0px 0px 5px;
+          font-size: 0.7rem;
+        }
+        .header__inputButton {
+          font-size: 0.8rem !important;
+          width: 30px !important;
+        }
+      }
+      .header__mic {
+        margin-left: 0px;
+        font-size: 0.9rem;
+      }
+    }
+    .header__icons {
+      .header__icon {
+        font-size: 0.9rem !important;
+      }
+      .header__Avatar {
+        width: 21px !important;
+        height: 21px !important;
+      }
+    }
+    .MuiIconButton-root {
+      padding: 5px !important;
+    }
+  }
+}
+@media only screen and (min-width: 250px) and (max-width: 329px) {
+  .header {
+    padding: 5px 7px 5px 7px;
+    .header__left {
+      .header__logo {
+        height: 20px;
+        margin-left: 0px;
+      }
+      .header__menuIcon {
+        font-size: 1.1rem !important;
+      }
+    }
+    .header__input {
+      display: none;
+    }
+    .header__icons {
+      .header__icon {
+        font-size: 1.1rem !important;
+      }
+      .header__Avatar {
+        width: 25px !important;
+        height: 25px !important;
+      }
+      .responsive__search {
+        display: inline-block !important;
+      }
+    }
+    .MuiIconButton-root {
+      padding: 6px !important;
+    }
+  }
+}
