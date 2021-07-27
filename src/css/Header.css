@@ -9,7 +9,12 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0px 15px 10px 15px;
+  padding: 5px 15px 5px 15px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 100;
 }
 
 .header .header__left {
