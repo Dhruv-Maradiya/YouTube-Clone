@@ -1,0 +1,15 @@
+.sidebar {
+  -webkit-box-flex: 0.2;
+      -ms-flex: 0.2;
+          flex: 0.2;
+  max-width: 240px;
+}
+
+.sidebar hr {
+  height: 1px;
+  border: 0;
+  background-color: lightgray;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/*# sourceMappingURL=Sidebar.css.map */
