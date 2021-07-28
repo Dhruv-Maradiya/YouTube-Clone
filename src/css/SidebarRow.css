@@ -21,12 +21,122 @@
   font-weight: 600;
 }
 .selectedRow {
-  cursor: pointer;
-  background-color: rgb(197, 196, 196);
+  background-color: rgb(197, 196, 196) !important;
 }
 .selectedRow > .sidebarrow__icon {
-  color: red;
+  color: red !important;
 }
 .selectedRow > .sidebarrow__text {
-  font-weight: 630;
+  font-weight: 630 !important;
+}
+@media only screen and (min-width: 560px) and (max-width: 1300px) {
+  .sidebarrow__text {
+    font-size: 8px;
+    margin-left: 0px;
+  }
+  .sidebarrow {
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 15px;
+  }
+  .sidebarrow__icon {
+    font-size: 1.35rem !important;
+  }
+  .selectedRow {
+    background-color: white;
+  }
+  .hideonsmalldevice {
+    display: none;
+  }
+}
+@media only screen and (min-width: 460px) and (max-width: 559px) {
+  .sidebarrow__text {
+    font-size: 6px;
+    margin-left: 0px;
+  }
+  .sidebarrow {
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 7px;
+  }
+  .sidebarrow__icon {
+    font-size: 1rem !important;
+  }
+  .selectedRow {
+    background-color: white;
+  }
+  .hideonsmalldevice {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1px) and (max-width: 459px) {
+  .sidebarrow__text {
+    font-size: 5px;
+    margin-left: 0px;
+  }
+  .sidebarrow {
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 5px;
+  }
+  .sidebarrow__icon {
+    font-size: 0.8rem !important;
+  }
+  .selectedRow {
+    background-color: white;
+  }
+  .hideonsmalldevice {
+    display: none;
+  }
+}
+
+/* drawer */
+.drawer {
+  height: 100vh;
+  position: fixed;
+  z-index: 200;
+  background-color: white;
+  top: 0;
+}
+.drawersidebarrow {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  width: 200px;
+}
+.drawer hr {
+  width: 200px;
+}
+.drawerheader {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px 10px 10px;
+}
+.drawer__logo {
+  height: 25px;
+  object-fit: contain;
+  margin-left: 10px;
+}
+.drawersidebarrow__icons {
+  color: #606060;
+  font-size: large !important;
+}
+.drawersidebarrow__text {
+  flex: 1;
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.drawersidebarrow:hover {
+  background-color: rgb(238, 237, 237);
+  cursor: pointer;
+}
+.drawersidebarrow:hover > .sidebarrow__text {
+  font-weight: 600;
+}
+.selectedRow > .drawersidebarrow__icons {
+  color: red !important;
+}
+.selectedRow > .drawersidebarrow__text {
+  font-weight: 630 !important;
 }

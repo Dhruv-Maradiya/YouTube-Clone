@@ -20,10 +20,10 @@ const Sidebar = () => {
             <hr />
             <SidebarRow title="Library" Icon={VideoLibraryIcon} />
             <SidebarRow title="History" Icon={HistoryIcon} />
-            <SidebarRow title="Your Video" Icon={OndemandVideoIcon} />
-            <SidebarRow title="Watch Later" Icon={WatchLaterIcon} />
-            <SidebarRow title="Liked Video" Icon={ThumbUpOutlinedIcon} />
-            <SidebarRow title="Show more" Icon={ExpandMoreOutlinedIcon} />
+            <SidebarRow title="Your Video" Icon={OndemandVideoIcon} hideonsmalldevice />
+            <SidebarRow title="Watch Later" Icon={WatchLaterIcon} hideonsmalldevice />
+            <SidebarRow title="Liked Video" Icon={ThumbUpOutlinedIcon} hideonsmalldevice />
+            <SidebarRow title="Show more" Icon={ExpandMoreOutlinedIcon} hideonsmalldevice />
             <hr />
         </div>
     )
