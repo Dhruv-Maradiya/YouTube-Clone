@@ -41,10 +41,13 @@ const Header = () => {
         input.style.display = "none";
         input.style.width = "unset";
     }
+    const sidebarSwap = () => {
+        console.log(document.getElementById("sidebar").style)
+    }
     return (
         <div className="header">
             <div className="header__left">
-                <IconButton>
+                <IconButton onClick={sidebarSwap}>
                     <MenuIcon className="header__menuIcon" />
                 </IconButton>
                 <img className="header__logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_(2015-2017).svg/1280px-Logo_of_YouTube_(2015-2017).svg.png" alt="logo" />

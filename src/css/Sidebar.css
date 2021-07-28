@@ -1,0 +1,27 @@
+.sidebar {
+  -webkit-box-flex: 0.2;
+  -ms-flex: 0.2;
+  flex: 0.2;
+  max-width: 200px;
+  height: 100%;
+  position: sticky;
+  background-color: white;
+  z-index: 99;
+  left: 0;
+  top: 58px;
+}
+
+.sidebar hr {
+  height: 1px;
+  border: 0;
+  background-color: lightgray;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 1px) and (max-width: 1300px) {
+  .sidebar {
+    display: none;
+  }
+}
+/*# sourceMappingURL=Sidebar.css.map */

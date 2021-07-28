@@ -5,5 +5,7 @@
 }
 .app__page {
   display: flex;
-  flex-direction: row;
+}
+::-webkit-scrollbar {
+  display: none;
 }
