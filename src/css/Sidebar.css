@@ -37,8 +37,15 @@
     transition: transform 0.4s ease-out;
   }
 }
-@media only screen and (min-width: 1px) {
-  .sidebar {
+@media only screen and (min-width: 1300px) {
+  .drawer {
     display: none;
+  }
+  .closeSidebar hr {
+    display: none;
+  }
+  .closeSidebar {
+    flex: unset;
+    max-width: 70px;
   }
 }

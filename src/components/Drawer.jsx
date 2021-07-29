@@ -12,11 +12,11 @@ import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
 import { IconButton } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 
-const Drawer = ({ sidebar, toggleSidebar }) => {
+const Drawer = ({ drawer, toggledrawer }) => {
     return (
-        <div className={sidebar ? "drawer open" : "drawer close"}>
+        <div className={drawer ? "drawer open" : "drawer close"}>
             <div className="drawerheader">
-                <IconButton onClick={() => { toggleSidebar() }}>
+                <IconButton onClick={() => { toggledrawer() }}>
                     <MenuIcon className="drawer__menuIcon" />
                 </IconButton>
                 <img className="drawer__logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_(2015-2017).svg/1280px-Logo_of_YouTube_(2015-2017).svg.png" alt="logo" />

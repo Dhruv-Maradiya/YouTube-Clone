@@ -6,18 +6,23 @@ import Recommended from "./Recommended";
 import Drawer from "./Drawer";
 
 function App() {
-  const [sidebar, setSidebar] = useState(false);
-  const toggleSidebar = () => {
-    setSidebar((value) => !value);
+  const [drawer, setdrawer] = useState(false);
+  const [sidebar, setSidebar] = useState(true);
+  const toggledrawer = () => {
+    if (window.innerWidth > 1300) {
+      setSidebar((preVal) => !preVal);
+    } else {
+      setdrawer((value) => !value);
+    }
   };
   return (
     <div className="app">
-      <Header toggleSidebar={toggleSidebar} />
+      <Header toggledrawer={toggledrawer} />
       <div className="app__page">
-        <Sidebar />
+        <Sidebar sidebar={sidebar} />
         <Recommended />
       </div>
-      <Drawer sidebar={sidebar} toggleSidebar={toggleSidebar} />
+      <Drawer drawer={drawer} toggledrawer={toggledrawer} />
     </div>
   );
 }

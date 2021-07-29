@@ -9,7 +9,7 @@ import { Avatar, IconButton } from '@material-ui/core';
 import MicIcon from '@material-ui/icons/Mic';
 import CloseIcon from '@material-ui/icons/Close';
 
-const Header = ({ toggleSidebar }) => {
+const Header = ({ toggledrawer }) => {
     const [value, setValue] = useState("");
     const [width, setWidth] = useState(window.innerWidth);
     useEffect(() => {
@@ -44,7 +44,7 @@ const Header = ({ toggleSidebar }) => {
     return (
         <div className="header">
             <div className="header__left">
-                <IconButton onClick={() => { toggleSidebar() }}>
+                <IconButton onClick={() => { toggledrawer() }}>
                     <MenuIcon className="header__menuIcon" />
                 </IconButton>
                 <img className="header__logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_(2015-2017).svg/1280px-Logo_of_YouTube_(2015-2017).svg.png" alt="logo" />

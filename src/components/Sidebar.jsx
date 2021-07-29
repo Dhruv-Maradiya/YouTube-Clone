@@ -11,9 +11,9 @@ import WatchLaterIcon from '@material-ui/icons/WatchLater';
 import ThumbUpOutlinedIcon from '@material-ui/icons/ThumbUpOutlined';
 import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
 
-const Sidebar = () => {
+const Sidebar = ({ sidebar }) => {
     return (
-        <div className="sidebar" id="sidebar" >
+        <div className={sidebar ? "sidebar" : "closeSidebar sidebar"} id="sidebar" >
             <SidebarRow selected={true} title="Home" Icon={HomeIcon} />
             <SidebarRow title="Trending" Icon={WhatshotIcon} />
             <SidebarRow title="Subcription" Icon={SubscriptionsIcon} />
