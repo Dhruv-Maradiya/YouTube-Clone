@@ -13,19 +13,24 @@ import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
 
 const Sidebar = ({ sidebar }) => {
     return (
-        <div className={sidebar ? "sidebar" : "closeSidebar sidebar"} id="sidebar" >
-            <SidebarRow selected={true} title="Home" Icon={HomeIcon} />
-            <SidebarRow title="Trending" Icon={WhatshotIcon} />
-            <SidebarRow title="Subcription" Icon={SubscriptionsIcon} />
-            <hr />
-            <SidebarRow title="Library" Icon={VideoLibraryIcon} />
-            <SidebarRow title="History" Icon={HistoryIcon} />
-            <SidebarRow title="Your Video" Icon={OndemandVideoIcon} hideonsmalldevice />
-            <SidebarRow title="Watch Later" Icon={WatchLaterIcon} hideonsmalldevice />
-            <SidebarRow title="Liked Video" Icon={ThumbUpOutlinedIcon} hideonsmalldevice />
-            <SidebarRow title="Show more" Icon={ExpandMoreOutlinedIcon} hideonsmalldevice />
-            <hr />
-        </div>
+        <>
+            <div className={sidebar ? "sidebar" : "closeSidebar sidebar"} id="sidebar" >
+                <SidebarRow selected={true} title="Home" Icon={HomeIcon} />
+                <SidebarRow title="Trending" Icon={WhatshotIcon} />
+                <SidebarRow title="Subcription" Icon={SubscriptionsIcon} />
+                <hr />
+                <SidebarRow title="Library" Icon={VideoLibraryIcon} />
+                <SidebarRow title="History" Icon={HistoryIcon} />
+                <SidebarRow title="Your Video" Icon={OndemandVideoIcon} hideonsmalldevice />
+                <SidebarRow title="Watch Later" Icon={WatchLaterIcon} hideonsmalldevice />
+                <SidebarRow title="Liked Video" Icon={ThumbUpOutlinedIcon} hideonsmalldevice />
+                <SidebarRow title="Show more" Icon={ExpandMoreOutlinedIcon} hideonsmalldevice />
+                <hr />
+            </div>
+            <div className={sidebar ? "hiddenSidebar" : "closehiddenSidebar hiddenSidebar"}>
+                <div style={{ width: "100%" }}>xyzxyzxyzxyzyxzxyzxyzxyzxyzyxz</div>
+            </div>
+        </>
     )
 }
 

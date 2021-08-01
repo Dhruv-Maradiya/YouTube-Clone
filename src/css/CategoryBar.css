@@ -1,0 +1,27 @@
+.categoryBar {
+  flex: 1;
+  display: flex;
+  position: sticky;
+  top: 58px;
+  left: 0;
+  background-color: white;
+  z-index: 99;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+.categoryBar__item {
+  min-width: fit-content;
+  background-color: lightgray;
+  border-radius: 16px;
+  padding: 4px 15px;
+  margin: 10px 7px;
+}
+.categoryBar__item h4 {
+  font-weight: 400;
+  color: black;
+}
+.categoryBar__item:nth-child(1) {
+  margin-left: 20px;
+}

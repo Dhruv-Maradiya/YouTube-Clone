@@ -6,8 +6,10 @@
   padding: 5px 15px 5px 7px;
   position: sticky;
   top: 0;
+  left: 0;
   background-color: white;
   z-index: 100;
+  height: 58px;
   .header__left {
     width: fit-content;
     display: flex;
@@ -58,6 +60,7 @@
 }
 @media only screen and (min-width: 330px) {
   .header {
+    height: 58px;
     .header__input {
       display: flex !important;
     }
@@ -70,6 +73,7 @@
 }
 @media only screen and (min-width: 560px) and (max-width: 800px) {
   .header {
+    height: 58px;
     padding: 5px 10px 5px 14px;
     .header__left {
       .header__logo {
@@ -113,6 +117,7 @@
 }
 @media only screen and (min-width: 460px) and (max-width: 559px) {
   .header {
+    height: 58px;
     padding: 5px 7px 5px 7px;
     .header__left {
       .header__logo {
@@ -159,6 +164,7 @@
 }
 @media only screen and (min-width: 330px) and (max-width: 459px) {
   .header {
+    height: 58px;
     padding: 5px 7px 5px 7px;
     .header__left {
       margin-right: 6px;
@@ -205,6 +211,7 @@
 }
 @media only screen and (min-width: 250px) and (max-width: 329px) {
   .header {
+    height: 58px;
     padding: 5px 7px 5px 5px;
     .header__left {
       .header__logo {

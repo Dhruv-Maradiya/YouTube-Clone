@@ -44,7 +44,7 @@
     font-size: 1.35rem !important;
   }
   .closeSidebar .selectedRow {
-    background-color: white;
+    background-color: white !important;
   }
   .closeSidebar .hideonsmalldevice {
     display: none;
@@ -64,10 +64,16 @@
     font-size: 1.35rem !important;
   }
   .selectedRow {
-    background-color: white;
+    background-color: white !important;
   }
   .hideonsmalldevice {
     display: none;
+  }
+  .hiddenSidebar {
+    width: 71.91px;
+  }
+  .sidebar {
+    width: 71.91px;
   }
 }
 @media only screen and (min-width: 460px) and (max-width: 559px) {
@@ -84,10 +90,16 @@
     font-size: 1rem !important;
   }
   .selectedRow {
-    background-color: white;
+    background-color: white !important;
   }
   .hideonsmalldevice {
     display: none;
+  }
+  .hiddenSidebar {
+    width: 45.44px;
+  }
+  .sidebar {
+    width: 45.44px;
   }
 }
 @media only screen and (min-width: 1px) and (max-width: 459px) {
@@ -104,10 +116,16 @@
     font-size: 0.8rem !important;
   }
   .selectedRow {
-    background-color: white;
+    background-color: white !important;
   }
   .hideonsmalldevice {
     display: none;
+  }
+  .hiddenSidebar {
+    width: 36.2px;
+  }
+  .sidebar {
+    width: 36.2px;
   }
 }
 
