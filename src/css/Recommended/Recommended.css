@@ -9,7 +9,18 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: 20px;
   overflow: hidden;
+}
+
+.recommended .recommended__videos {
+  overflow-y: hidden;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 25px;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
 }
 /*# sourceMappingURL=Recommended.css.map */

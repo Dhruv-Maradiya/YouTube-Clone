@@ -1,0 +1,38 @@
+.login {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.login__screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  background-color: #bdbcbc;
+}
+.login__screen span {
+  padding: 10px;
+  font-weight: 500;
+}
+.login__screen img {
+  width: 200px;
+  height: 130px;
+  object-fit: contain;
+  background-color: transparent;
+}
+.login__screen button {
+  padding: 6px 8px;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  text-transform: capitalize;
+  background-color: white;
+  margin-bottom: 10px;
+  transition: transform 0.25s;
+}
+.login__screen button:hover {
+  transform: scale(1.2);
+  transition: transform 0.25s;
+  background-color: #d2d8d8;
+}

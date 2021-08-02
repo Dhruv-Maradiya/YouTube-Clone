@@ -2,6 +2,14 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
   overflow: hidden;
+  .recommended__videos {
+    overflow-y: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 25px;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
 }

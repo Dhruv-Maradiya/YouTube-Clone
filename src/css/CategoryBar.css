@@ -1,13 +1,12 @@
 .categoryBar {
   flex: 1;
-  display: flex;
-  position: sticky;
-  top: 58px;
-  left: 0;
   background-color: white;
   z-index: 99;
   border-top: 1px solid lightgray;
   border-bottom: 1px solid lightgray;
+  overflow: hidden;
+}
+.categoryBar__items {
   overflow-x: auto;
   scroll-behavior: smooth;
 }
@@ -20,8 +19,14 @@
 }
 .categoryBar__item h4 {
   font-weight: 400;
-  color: black;
 }
 .categoryBar__item:nth-child(1) {
   margin-left: 20px;
+}
+.categoryBar__item:last-child {
+  margin-right: 20px;
+}
+.active {
+  background-color: black;
+  color: white;
 }
