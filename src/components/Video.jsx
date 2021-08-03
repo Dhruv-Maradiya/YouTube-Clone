@@ -1,23 +1,39 @@
-import React from 'react';
-import "../css/Video/video.css"
-// import VisibilityIcon from '@material-ui/icons/Visibility';
+import moment from 'moment';
+import numeral from 'numeral';
+import React, { useEffect, useState } from 'react';
+import request from '../api';
+import "../css/Video/video.css";
 
-const Video = () => {
+const Video = ({ video }) => {
+    const [channelIcon, setChannelIcon] = useState(null);
+    const { snippet: { thumbnails: { medium: { url } }, description, channelTitle, publishedAt, channelId }, contentDetails: { duration }, statistics: { viewCount } } = video;
+    useEffect(() => {
+        const getChannelIcon = async () => {
+            const { data: { items } } = await request('/channels', {
+                params: {
+                    part: 'snippet',
+                    id: channelId,
+                }
+            })
+            setChannelIcon(items[0].snippet.thumbnails.default.url);
+        }
+        getChannelIcon();
+    }, [channelId])
     return (
         <div className="video">
             <div className="video__top">
-                <img src="https://i.ytimg.com/vi/Mos5QJAje28/hq720.jpg?sqp=-…AFwAcABBg==&rs=AOn4CLCFbVeOdpHjPmjEkLBCOpvPJC5eMg" alt="" />
-                <span>5:43</span>
+                <img src={url} alt="" />
+                <span>{moment.utc(moment.duration(duration).asSeconds() * 1000).format("mm:ss")}</span>
             </div>
             <div className="video__title">
-                <img src="https://yt3.ggpht.com/ytc/AKedOLQOx-f1zXUD0noAXesqkqSPq9RDBb6Pg-zGH9H8=s68-c-k-c0x00ffffff-no-rj" alt="" />
-                <p>React Js With Firebase and Make fully function YouTube Clone and Host it On Firebase For Free</p>
+                <img src={channelIcon} alt="" />
+                <p>{description}</p>
             </div>
             <div className="video__channel">
-                <p>CodeWithDhruv</p>
+                <p>{channelTitle}</p>
             </div>
             <div className="video__details">
-                <p>19K views • 6 months ago</p>
+                <p>{numeral(viewCount).format("0.a")} views • {moment(publishedAt).fromNow()}</p>
             </div>
         </div>
     )
