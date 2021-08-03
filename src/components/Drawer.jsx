@@ -11,10 +11,21 @@ import ThumbUpOutlinedIcon from '@material-ui/icons/ThumbUpOutlined';
 import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
 import { IconButton } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import { useDispatch } from 'react-redux';
+import { log_out } from '../redux/actions/auth.action';
 
 const Drawer = ({ drawer, toggledrawer }) => {
+    const dispatch = useDispatch()
+    const logOutHandler = () => {
+        dispatch(log_out())
+    }
+    const hideDrawer = () => {
+        document.getElementsByClassName("drawer")[0].classList.remove("open");
+        document.getElementsByClassName("drawer")[0].classList.add("close");
+    }
     return (
-        <div className={drawer ? "drawer open" : "drawer close"}>
+        <div className={drawer ? "drawer open" : "drawer close"} onClick={hideDrawer}>
             <div className="drawerheader">
                 <IconButton onClick={() => { toggledrawer() }}>
                     <MenuIcon className="drawer__menuIcon" />
@@ -33,7 +44,7 @@ const Drawer = ({ drawer, toggledrawer }) => {
                 <SidebarRow drawer={true} title="Liked Video" Icon={ThumbUpOutlinedIcon} />
                 <SidebarRow drawer={true} title="Show more" Icon={ExpandMoreOutlinedIcon} />
                 <hr />
-
+                <SidebarRow drawer={true} title="Log Out" Icon={ExitToAppIcon} onClick={logOutHandler} />
             </div>
         </div>
     )

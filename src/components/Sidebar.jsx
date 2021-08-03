@@ -10,6 +10,7 @@ import OndemandVideoIcon from '@material-ui/icons/OndemandVideo';
 import WatchLaterIcon from '@material-ui/icons/WatchLater';
 import ThumbUpOutlinedIcon from '@material-ui/icons/ThumbUpOutlined';
 import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 const Sidebar = ({ sidebar }) => {
     return (
@@ -26,6 +27,8 @@ const Sidebar = ({ sidebar }) => {
                 <SidebarRow title="Liked Video" Icon={ThumbUpOutlinedIcon} hideonsmalldevice />
                 <SidebarRow title="Show more" Icon={ExpandMoreOutlinedIcon} hideonsmalldevice />
                 <hr />
+                <SidebarRow title="Log Out" Icon={ExitToAppIcon} hideonsmalldevice />
+
             </div>
             <div className={sidebar ? "hiddenSidebar" : "closehiddenSidebar hiddenSidebar"}>
                 <div style={{ width: "100%" }}>xyzxyzxyzxyzyxzxyzxyzxyzxyzyxz</div>
