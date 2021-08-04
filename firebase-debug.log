@@ -1,0 +1,60 @@
+[debug] [2021-08-04T08:32:43.606Z] ----------------------------------------------------------------------
+[debug] [2021-08-04T08:32:43.608Z] Command:       C:\Program Files (x86)\nodejs\node.exe C:\Users\Dhruv\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-08-04T08:32:43.608Z] CLI Version:   9.16.0
+[debug] [2021-08-04T08:32:43.608Z] Platform:      win32
+[debug] [2021-08-04T08:32:43.608Z] Node Version:  v14.16.1
+[debug] [2021-08-04T08:32:43.609Z] Time:          Wed Aug 04 2021 14:02:43 GMT+0530 (India Standard Time)
+[debug] [2021-08-04T08:32:43.609Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-08-04T08:32:43.615Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-08-04T08:32:43.615Z] > authorizing via signed-in user (dhruvmaradiya0@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\React Projects\youtube-clone
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2021-08-04T08:33:08.573Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2021-08-04T08:33:09.317Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2021-08-04T08:33:09.317Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project clone-498e3 (YouTube-Clone) 
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2021-08-04T08:42:53.802Z] ----------------------------------------------------------------------
+[debug] [2021-08-04T08:42:53.804Z] Command:       C:\Program Files (x86)\nodejs\node.exe C:\Users\Dhruv\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-08-04T08:42:53.804Z] CLI Version:   9.16.0
+[debug] [2021-08-04T08:42:53.804Z] Platform:      win32
+[debug] [2021-08-04T08:42:53.804Z] Node Version:  v14.16.1
+[debug] [2021-08-04T08:42:53.805Z] Time:          Wed Aug 04 2021 14:12:53 GMT+0530 (India Standard Time)
+[debug] [2021-08-04T08:42:53.806Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-08-04T08:42:53.811Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-08-04T08:42:53.811Z] > authorizing via signed-in user (dhruvmaradiya0@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\React Projects\youtube-clone
+
