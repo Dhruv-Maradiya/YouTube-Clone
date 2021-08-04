@@ -19,6 +19,7 @@
 }
 .categoryBar__item h4 {
   font-weight: 400;
+  font-size: 15px;
 }
 .categoryBar__item:nth-child(1) {
   margin-left: 20px;
@@ -29,4 +30,50 @@
 .active {
   background-color: black;
   color: white;
+}
+
+@media only screen and (min-width: 1300px) and (max-width: 1500px) {
+  .categoryBar__item {
+    padding: 4px 13px;
+    margin: 8px 7px;
+  }
+  .categoryBar__item h4 {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 1000px) and (max-width: 1299px) {
+  .categoryBar__item {
+    padding: 4px 13px;
+    margin: 8px 7px;
+  }
+  .categoryBar__item h4 {
+    font-size: 13px;
+  }
+}
+@media only screen and (min-width: 700px) and (max-width: 999px) {
+  .categoryBar__item {
+    padding: 4px 13px;
+    margin: 5px 7px;
+  }
+  .categoryBar__item h4 {
+    font-size: 12px;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 699px) {
+  .categoryBar__item {
+    padding: 4px 12px;
+    margin: 5px 5px;
+  }
+  .categoryBar__item h4 {
+    font-size: 11px;
+  }
+}
+@media only screen and (min-width: 250px) and (max-width: 499px) {
+  .categoryBar__item {
+    padding: 4px 10px;
+    margin: 5px 5px;
+  }
+  .categoryBar__item h4 {
+    font-size: 8px;
+  }
 }

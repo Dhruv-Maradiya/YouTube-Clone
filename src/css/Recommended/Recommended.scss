@@ -5,11 +5,10 @@
   overflow: hidden;
   .recommended__videos {
     overflow-y: hidden;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 25px;
-    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
     padding: 10px;
+    padding-top: 15px;
     background-color: #f9f9f9;
   }
 }

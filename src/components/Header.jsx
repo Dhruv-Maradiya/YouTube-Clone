@@ -8,8 +8,16 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import { Avatar, IconButton } from '@material-ui/core';
 import MicIcon from '@material-ui/icons/Mic';
 import CloseIcon from '@material-ui/icons/Close';
+import { useSelector } from 'react-redux';
 
 const Header = ({ toggledrawer }) => {
+    const auth = useSelector(state => state.auth);
+    const [url, setUrl] = useState(null)
+    useEffect(() => {
+        if (!auth.loading && auth.accessToken) {
+            setUrl(auth.user.url);
+        }
+    }, [auth]);
     const [value, setValue] = useState("");
     const [width, setWidth] = useState(window.innerWidth);
     useEffect(() => {
@@ -74,7 +82,7 @@ const Header = ({ toggledrawer }) => {
                 <IconButton className="header__iconButton" >
                     <NotificationsIcon className="header__icon" />
                 </IconButton>
-                <Avatar className="header__icon header__Avatar" />
+                <Avatar className="header__icon header__Avatar" src={url ? url : ""} />
             </div>
         </div>
     )
