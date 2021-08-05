@@ -1,0 +1,98 @@
+.comments {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.comments .commenta__sort {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.comments .commenta__sort .comments__count {
+  margin-right: 30px;
+  font-weight: 400;
+}
+
+.comments .commenta__sort .comment__sorticon {
+  margin-right: 8px;
+  color: gray;
+}
+
+.comments .comment__input {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  width: 100%;
+}
+
+.comments .comment__input form {
+  margin-top: -15px;
+  margin-left: 20px;
+}
+
+.comments .comment__input form input {
+  min-width: 800px;
+  width: 100% !important;
+}
+
+.comments .comment__allComments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.comments .comment__allComments .comment__comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.comments .comment__allComments .comment__comment .comment__commentInfo {
+  margin-left: 20px;
+}
+
+.comments .comment__allComments .comment__comment .comment__commentInfo h5 {
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: capitalize;
+  margin-bottom: 8px;
+}
+
+.comments .comment__allComments .comment__comment .comment__commentInfo h5 span {
+  font-weight: 400;
+  margin-left: 8px;
+}
+
+.comments .comment__allComments .comment__comment .comment__commentInfo p {
+  margin-bottom: 10px;
+}
+
+.comments .comment__allComments .comment__comment .comment__commentInfo .comments__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.comments .comment__allComments .comment__comment .comment__commentInfo .comments__buttons .button {
+  font-size: 18px;
+  color: gray;
+}
+
+.comments .comment__allComments .comment__comment .comment__commentInfo .comments__buttons span {
+  font-size: 13px;
+  margin-right: 20px;
+  margin-left: 8px;
+}
+/*# sourceMappingURL=comments.css.map */

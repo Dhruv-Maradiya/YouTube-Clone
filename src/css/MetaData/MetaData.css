@@ -1,0 +1,143 @@
+.metadata {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 20px;
+}
+
+.metadata .metadata__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.metadata .metadata__info .metadata__desc h3 {
+  color: black;
+  font-weight: 350;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.metadata .metadata__info .metadata__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px;
+}
+
+.metadata .metadata__info .metadata__buttons .metadata__views {
+  color: gray;
+}
+
+.metadata .metadata__info .metadata__allbuttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+.metadata .metadata__info .metadata__allbuttons * {
+  margin-right: 10px;
+}
+
+.metadata .metadata__info .metadata__allbuttons .likes {
+  margin-right: 20px;
+}
+
+.metadata .metadata__info .metadata__allbuttons .Button {
+  color: gray;
+}
+
+.metadata hr {
+  margin-top: 20px;
+  height: 0.5px;
+  color: lightgray;
+}
+
+.metadata .metadata__subscribe {
+  margin-top: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.metadata .metadata__subscribe .metadata__userIcon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.metadata .metadata__subscribe .metadata__userIcon .avatar {
+  height: 40px;
+  width: 40px;
+}
+
+.metadata .metadata__subscribe .metadata__userIcon .metadata__channelinfo {
+  margin-left: 10px;
+}
+
+.metadata .metadata__subscribe .metadata__userIcon .metadata__channelinfo h4 {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.metadata .metadata__subscribe .metadata__userIcon .metadata__channelinfo p {
+  font-size: 14px;
+}
+
+.metadata .metadata__subscribe .metadata__subscribeButton button {
+  padding: 8px 13px;
+  margin-left: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.metadata .metadata__subscribe .metadata__subscribeButton button:first-child {
+  border: 1px solid #065fd4;
+  color: #065fd4;
+  background-color: white;
+}
+
+.metadata .metadata__subscribe .metadata__subscribeButton button:last-child {
+  border: 1px solid red;
+  color: white;
+  background-color: red;
+}
+
+.metadata .metadata__text {
+  margin-left: 50px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.metadata .metadata__text .metadata__alltext {
+  white-space: pre-line;
+}
+
+.metadata .metadata__text .metadata__anchor {
+  display: block;
+  text-decoration: none;
+  color: gray;
+  margin-top: 15px;
+}
+/*# sourceMappingURL=MetaData.css.map */

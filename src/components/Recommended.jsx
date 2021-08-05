@@ -20,7 +20,6 @@ const Recommended = () => {
             dispatch(getVideosByCategory(activeCategory))
         }
     }
-    console.log(videos[0])
     return (
         <div className="recommended">
             <CategoryBar />

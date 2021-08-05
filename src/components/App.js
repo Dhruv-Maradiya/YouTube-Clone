@@ -7,12 +7,13 @@ import Drawer from "./Drawer";
 import { Switch, Route, Redirect, useHistory } from "react-router-dom";
 import Login from "./Login";
 import { useSelector } from "react-redux";
+import WatchScreen from "./WatchScreen";
 
-const Window = ({ Screen }) => {
+const Window = ({ Screen, home }) => {
   const [drawer, setdrawer] = useState(false);
   const [sidebar, setSidebar] = useState(true);
   const toggledrawer = () => {
-    if (window.innerWidth > 1300) {
+    if (window.innerWidth > 1300 && home) {
       setSidebar((preVal) => !preVal);
     } else {
       setdrawer((value) => !value);
@@ -22,7 +23,7 @@ const Window = ({ Screen }) => {
     <>
       <Header toggledrawer={toggledrawer} />
       <div className="app__page">
-        <Sidebar sidebar={sidebar} />
+        {home ? <Sidebar sidebar={sidebar} /> : null}
         <Screen />
       </div>
       <Drawer drawer={drawer} toggledrawer={toggledrawer} />
@@ -41,10 +42,13 @@ function App() {
     <div className="app">
       <Switch>
         <Route exact path="/">
-          <Window Screen={Recommended} />
+          <Window Screen={Recommended} home />
         </Route>
         <Route exact path="/login">
           <Login />
+        </Route>
+        <Route exact path="/watch/:id">
+          <Window Screen={WatchScreen} />
         </Route>
         <Redirect to="/" /> {/* Redirect to Home Screen */}
       </Switch>

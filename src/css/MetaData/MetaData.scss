@@ -1,0 +1,101 @@
+.metadata {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  .metadata__info {
+    display: flex;
+    flex-direction: column;
+    .metadata__desc {
+      h3 {
+        color: black;
+        font-weight: 350;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    }
+    .metadata__buttons {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      .metadata__views {
+        color: gray;
+      }
+    }
+    .metadata__allbuttons {
+      display: flex;
+      text-align: center;
+      * {
+        margin-right: 10px;
+      }
+      .likes {
+        margin-right: 20px;
+      }
+      .Button {
+        color: gray;
+      }
+    }
+  }
+  hr {
+    margin-top: 20px;
+    height: 0.5px;
+    color: lightgray;
+  }
+  .metadata__subscribe {
+    margin-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .metadata__userIcon {
+      display: flex;
+      .avatar {
+        height: 40px;
+        width: 40px;
+      }
+      .metadata__channelinfo {
+        margin-left: 10px;
+        h4 {
+          font-weight: 600;
+          font-size: 16px;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+    .metadata__subscribeButton {
+      button {
+        padding: 8px 13px;
+        margin-left: 10px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+      }
+      button:first-child {
+        border: 1px solid #065fd4;
+        color: #065fd4;
+        background-color: white;
+      }
+      button:last-child {
+        border: 1px solid red;
+        color: white;
+        background-color: red;
+      }
+    }
+  }
+  .metadata__text {
+    margin-left: 50px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    .metadata__alltext {
+      white-space: pre-line;
+    }
+    .metadata__anchor {
+      display: block;
+      text-decoration: none;
+      color: gray;
+      margin-top: 15px;
+    }
+  }
+}

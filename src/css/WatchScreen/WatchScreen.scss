@@ -1,0 +1,14 @@
+.watchScreen {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 15px;
+  padding: 30px 50px;
+  background-color: #f9f9f9;
+  .watchScreen__player {
+    height: 70vh;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}

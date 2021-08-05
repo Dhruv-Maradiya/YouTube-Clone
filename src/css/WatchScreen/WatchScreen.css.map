@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,CAAC;EACX,KAAK,EAAE,IAAI;EACX,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,OAAO;EAC9B,kBAAkB,EAAE,GAAG;EACvB,QAAQ,EAAE,IAAI;EACd,OAAO,EAAE,SAAS;EAClB,gBAAgB,EAAE,OAAO;CAM1B;;AAbD,AAQE,YARU,CAQV,oBAAoB,CAAC;EACnB,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;EACX,aAAa,EAAE,IAAI;CACpB",
+    "sources": [
+        "WatchScreen.scss"
+    ],
+    "names": [],
+    "file": "WatchScreen.css"
+}

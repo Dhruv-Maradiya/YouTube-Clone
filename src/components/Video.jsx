@@ -1,10 +1,12 @@
 import moment from 'moment';
 import numeral from 'numeral';
 import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import request from '../api';
 import "../css/Video/video.css";
 
 const Video = ({ video }) => {
+    const history = useHistory()
     const [channelIcon, setChannelIcon] = useState(null);
     const [views, setViews] = useState(null);
     const [duration, setDuration] = useState(null);
@@ -40,8 +42,11 @@ const Video = ({ video }) => {
         }
         getChannelDetails();
     }, [videoId]);
+    const handleClick = () => {
+        history.push(`/watch/${videoId}`)
+    }
     return (
-        <div className="video">
+        <div className="video" onClick={handleClick} >
             <div className="video__top">
                 <img src={url} alt="" />
                 <span>{moment.utc(moment.duration(duration).asSeconds() * 1000).format("mm:ss")}</span>
