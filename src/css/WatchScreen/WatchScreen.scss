@@ -1,14 +1,21 @@
 .watchScreen {
   width: 100%;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr;
+  display: flex;
+  flex-direction: row;
   grid-gap: 15px;
   padding: 30px 50px;
   background-color: #f9f9f9;
   .watchScreen__player {
-    height: 70vh;
-    width: 100%;
+    flex: 0.66;
+    min-width: 600px;
+    iframe {
+      width: 100%;
+      height: 70vh;
+    }
     margin-bottom: 2rem;
+  }
+  .watchScreen_related {
+    width: 100%;
+    flex: 0.34;
   }
 }

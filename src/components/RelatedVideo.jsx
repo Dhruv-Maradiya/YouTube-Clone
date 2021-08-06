@@ -1,17 +1,42 @@
-import React from 'react';
+import moment from 'moment';
+import numeral from 'numeral';
+import React, { useEffect, useState } from 'react';
+import request from '../api';
 import "../css/RelatedVideo/RelatedVideo.css";
 
-const RelatedVideo = () => {
+const RelatedVideo = ({ item }) => {
+    const [views, setViews] = useState(0);
+    const [duration, setDuration] = useState(0);
+    useEffect(() => {
+        const getChannelDetails = async (videoId) => {
+            const { data: { items } } = await request('/videos', {
+                params: {
+                    part: 'contentDetails,statistics',
+                    id: videoId,
+                }
+            })
+            if (items[0] !== undefined) {
+                setViews(items[0].statistics.viewCount);
+                setDuration(items[0].contentDetails.duration);
+            }
+        }
+        getChannelDetails(item.id.videoId);
+    }, [item.id.videoId]);
+    if (item !== undefined && item !== null && item.snippet !== undefined) {
+        var { snippet: { publishedAt, title, channelTitle, thumbnails: { medium: { url } } } } = item;
+    } else {
+        return null;
+    }
     return (
         <div className="relatedVideo">
             <div className="relatedVideo__thumbnail">
-                <img src="https://i.ytimg.com/vi/Jl7V0ZIOmw4/mqdefault.jpg" alt="" srcset="" />
-                <span>5:15</span>
+                <img src={url} alt="" />
+                <span>{moment.utc(moment.duration(duration).asSeconds() * 1000).format("mm:ss")}</span>
             </div>
             <div className="relatedVideo__info">
-                <h4>Compele Redux Tutorial In Hindi And Lots of Fun Friends,GuysCompele Redux Tutorial In Hindi And Lots of Fun Friends,Guys</h4>
-                <h6>Thapa Technical</h6>
-                <span>65K Views • 3 months ago</span>
+                <h4>{title}</h4>
+                <h6>{channelTitle}</h6>
+                <span>{numeral(views).format("0.a")} Views • {moment(publishedAt).fromNow()}</span>
             </div>
         </div>
     )

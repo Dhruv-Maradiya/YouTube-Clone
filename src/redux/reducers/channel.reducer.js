@@ -28,7 +28,6 @@ export const channelDetailReducer = (
       return {
         ...state,
         loading: false,
-        channel: null,
         error: payload,
       };
 

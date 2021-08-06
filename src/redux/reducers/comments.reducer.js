@@ -28,7 +28,6 @@ export const commentReducer = (
       return {
         ...state,
         loading: false,
-        comments: null,
         error: payload,
       };
 

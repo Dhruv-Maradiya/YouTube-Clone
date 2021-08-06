@@ -69,7 +69,6 @@ export const selectedVideoReducer = (
       return {
         ...state,
         loading: false,
-        video: null,
         error: payload,
       };
 

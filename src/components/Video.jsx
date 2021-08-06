@@ -10,7 +10,7 @@ const Video = ({ video }) => {
     const [channelIcon, setChannelIcon] = useState(null);
     const [views, setViews] = useState(null);
     const [duration, setDuration] = useState(null);
-    const { id, snippet: { thumbnails: { medium: { url } }, description, channelTitle, publishedAt, channelId } } = video;
+    const { id, snippet: { thumbnails: { medium: { url } }, localized: { title }, channelTitle, publishedAt, channelId } } = video;
     const videoId = id?.videoId || id;
     useEffect(() => {
         const getChannelIcon = async () => {
@@ -53,7 +53,7 @@ const Video = ({ video }) => {
             </div>
             <div className="video__title">
                 <img src={channelIcon} alt="" width="160px" height="90px" />
-                <p>{description}</p>
+                <p>{title}</p>
             </div>
             <div className="video__channel">
                 <p>{channelTitle}</p>
