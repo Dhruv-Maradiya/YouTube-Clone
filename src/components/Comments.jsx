@@ -11,7 +11,7 @@ import Comment from './Comment';
 const Comments = ({ id }) => {
     const dispatch = useDispatch();
     const { comments, loading } = useSelector(state => state.commentReducer);
-    const { url } = useSelector(state => state.auth.user);
+    const { url } = useSelector(state => state.auth.user ? state.auth.user : "");
     const submitComment = () => { }
     useEffect(() => {
         dispatch(getCommentsById(id));

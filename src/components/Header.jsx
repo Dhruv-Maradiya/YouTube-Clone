@@ -8,18 +8,26 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import { Avatar, IconButton } from '@material-ui/core';
 import MicIcon from '@material-ui/icons/Mic';
 import CloseIcon from '@material-ui/icons/Close';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { getVideosByKeyword } from '../redux/actions/search.action';
+import { useHistory } from 'react-router-dom';
 
 const Header = ({ toggledrawer }) => {
-    const auth = useSelector(state => state.auth);
+    const history = useHistory()
+    const [value, setValue] = useState("");
+    const [width, setWidth] = useState(window.innerWidth);
     const [url, setUrl] = useState(null)
+    const dispatch = useDispatch();
+    const searchVideos = () => {
+        dispatch(getVideosByKeyword(value));
+        history.push("/search");
+    }
+    const auth = useSelector(state => state.auth);
     useEffect(() => {
         if (!auth.loading && auth.accessToken) {
             setUrl(auth.user.url);
         }
     }, [auth]);
-    const [value, setValue] = useState("");
-    const [width, setWidth] = useState(window.innerWidth);
     useEffect(() => {
         if (width >= 331 && document.getElementsByClassName("header__close")[0].style.display !== "none") {
             document.getElementsByClassName("header__left")[0].style.display = "flex";
@@ -60,7 +68,7 @@ const Header = ({ toggledrawer }) => {
             <div className="header__input">
                 <div className="header__inputArea">
                     <input value={value} type="text" placeholder="Search" onChange={e => setValue(e.target.value)} />
-                    <SearchIcon className="header__inputButton" />
+                    <SearchIcon className="header__inputButton" onClick={searchVideos} />
                 </div>
                 <IconButton>
                     <MicIcon className="header__mic header__icon" />

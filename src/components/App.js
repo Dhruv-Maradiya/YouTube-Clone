@@ -8,6 +8,7 @@ import { Switch, Route, Redirect, useHistory } from "react-router-dom";
 import Login from "./Login";
 import { useSelector } from "react-redux";
 import WatchScreen from "./WatchScreen";
+import Search from "./Search";
 
 const Window = ({ Screen, home }) => {
   const [drawer, setdrawer] = useState(false);
@@ -35,7 +36,7 @@ function App() {
   const { accessToken, loading } = useSelector((state) => state.auth);
   useEffect(() => {
     if (!accessToken && !loading) {
-      history.push("/login");
+      // history.push("/login");
     }
   }, [accessToken, loading, history]);
   return (
@@ -50,7 +51,10 @@ function App() {
         <Route exact path="/watch/:id">
           <Window Screen={WatchScreen} />
         </Route>
-        <Redirect to="/" /> {/* Redirect to Home Screen */}
+        <Route exact path="/search">
+          <Window Screen={Search} home />
+        </Route>
+        <Redirect to="/" />
       </Switch>
     </div>
   );
