@@ -140,4 +140,262 @@
   color: gray;
   margin-top: 15px;
 }
+
+@media only screen and (min-width: 600px) and (max-width: 700px) {
+  .metadata {
+    margin-top: 18px;
+  }
+  .metadata .metadata__info .metadata__desc h3 {
+    font-size: 16px;
+    font-weight: 500;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+  }
+  .metadata .metadata__info .metadata__buttons {
+    margin-top: 9px;
+  }
+  .metadata .metadata__info .metadata__buttons .metadata__views {
+    color: gray;
+    font-size: 16px;
+  }
+  .metadata .metadata__info .metadata__allbuttons * {
+    margin-right: 9px;
+  }
+  .metadata .metadata__info .metadata__allbuttons .likes {
+    margin-right: 18px;
+  }
+  .metadata .metadata__info .metadata__allbuttons .Button {
+    color: gray;
+    font-size: 20px;
+  }
+  .metadata .metadata__info .metadata__allbuttons p {
+    font-size: 14px;
+  }
+  .metadata hr {
+    margin-top: 18px;
+  }
+  .metadata .metadata__subscribe {
+    margin-top: 19px;
+  }
+  .metadata .metadata__subscribe .metadata__userIcon .avatar {
+    height: 35px;
+    width: 35px;
+  }
+  .metadata .metadata__subscribe .metadata__userIcon .metadata__channelinfo {
+    margin-left: 10px;
+  }
+  .metadata .metadata__subscribe .metadata__userIcon .metadata__channelinfo h4 {
+    font-size: 14px;
+  }
+  .metadata .metadata__subscribe .metadata__userIcon .metadata__channelinfo p {
+    font-size: 12px;
+  }
+  .metadata .metadata__subscribe .metadata__subscribeButton button {
+    padding: 5px 11px;
+    font-size: 12px;
+    margin-left: 9px;
+  }
+  .metadata .metadata__text {
+    margin-left: 48px;
+  }
+  .metadata .metadata__text .metadata__alltext {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 599px) {
+  .metadata {
+    margin-top: 13px;
+  }
+  .metadata .metadata__info .metadata__desc h3 {
+    font-weight: 500;
+    font-size: 16px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+  }
+  .metadata .metadata__info .metadata__buttons {
+    margin-top: 8px;
+  }
+  .metadata .metadata__info .metadata__buttons .metadata__views {
+    color: gray;
+    font-size: 16px;
+  }
+  .metadata .metadata__info .metadata__allbuttons * {
+    margin-right: 9px;
+  }
+  .metadata .metadata__info .metadata__allbuttons .likes {
+    margin-right: 18px;
+  }
+  .metadata .metadata__info .metadata__allbuttons .Button {
+    color: gray;
+    font-size: 20px;
+  }
+  .metadata .metadata__info .metadata__allbuttons p {
+    font-size: 14px;
+  }
+  .metadata hr {
+    margin-top: 14px;
+  }
+  .metadata .metadata__subscribe {
+    margin-top: 15px;
+  }
+  .metadata .metadata__subscribe .metadata__userIcon .avatar {
+    height: 35px;
+    width: 35px;
+  }
+  .metadata .metadata__subscribe .metadata__userIcon .metadata__channelinfo {
+    margin-left: 10px;
+  }
+  .metadata .metadata__subscribe .metadata__userIcon .metadata__channelinfo h4 {
+    font-size: 14px;
+  }
+  .metadata .metadata__subscribe .metadata__userIcon .metadata__channelinfo p {
+    font-size: 12px;
+  }
+  .metadata .metadata__subscribe .metadata__subscribeButton button {
+    padding: 5px 11px;
+    font-size: 12px;
+    margin-left: 9px;
+  }
+  .metadata .metadata__text {
+    margin-left: 48px;
+  }
+  .metadata .metadata__text .metadata__alltext {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 499px) {
+  .metadata {
+    margin-top: 11px;
+  }
+  .metadata .metadata__info .metadata__desc h3 {
+    font-weight: 500;
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+  }
+  .metadata .metadata__info .metadata__buttons {
+    margin-top: 7px;
+  }
+  .metadata .metadata__info .metadata__buttons .metadata__views {
+    color: gray;
+    font-size: 13px;
+  }
+  .metadata .metadata__info .metadata__allbuttons * {
+    margin-right: 7px;
+  }
+  .metadata .metadata__info .metadata__allbuttons .likes {
+    margin-right: 14px;
+  }
+  .metadata .metadata__info .metadata__allbuttons .Button {
+    color: gray;
+    font-size: 16px;
+  }
+  .metadata .metadata__info .metadata__allbuttons p {
+    font-size: 12px;
+  }
+  .metadata hr {
+    margin-top: 14px;
+  }
+  .metadata .metadata__subscribe {
+    margin-top: 13px;
+  }
+  .metadata .metadata__subscribe .metadata__userIcon .avatar {
+    height: 30px;
+    width: 30px;
+  }
+  .metadata .metadata__subscribe .metadata__userIcon .metadata__channelinfo {
+    margin-left: 10px;
+  }
+  .metadata .metadata__subscribe .metadata__userIcon .metadata__channelinfo h4 {
+    font-size: 12px;
+  }
+  .metadata .metadata__subscribe .metadata__userIcon .metadata__channelinfo p {
+    font-size: 11px;
+  }
+  .metadata .metadata__subscribe .metadata__subscribeButton button {
+    padding: 5px 8px;
+    font-size: 10px;
+    margin-left: 7px;
+  }
+  .metadata .metadata__text {
+    margin-left: 40px;
+  }
+  .metadata .metadata__text .metadata__alltext {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 399px) {
+  .metadata {
+    margin-top: 10px;
+  }
+  .metadata .metadata__info .metadata__desc h3 {
+    font-size: 11px;
+    font-weight: 500;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+  }
+  .metadata .metadata__info .metadata__buttons {
+    margin-top: 6px;
+  }
+  .metadata .metadata__info .metadata__buttons .metadata__views {
+    color: gray;
+    font-size: 11px;
+  }
+  .metadata .metadata__info .metadata__allbuttons * {
+    margin-right: 5px;
+  }
+  .metadata .metadata__info .metadata__allbuttons .likes {
+    margin-right: 11px;
+  }
+  .metadata .metadata__info .metadata__allbuttons .Button {
+    color: gray;
+    font-size: 14px;
+  }
+  .metadata .metadata__info .metadata__allbuttons p {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+  .metadata hr {
+    margin-top: 10px;
+  }
+  .metadata .metadata__subscribe {
+    margin-top: 10px;
+  }
+  .metadata .metadata__subscribe .metadata__userIcon .avatar {
+    height: 25px;
+    width: 25px;
+  }
+  .metadata .metadata__subscribe .metadata__userIcon .metadata__channelinfo {
+    margin-left: 8px;
+  }
+  .metadata .metadata__subscribe .metadata__userIcon .metadata__channelinfo h4 {
+    font-size: 10px;
+  }
+  .metadata .metadata__subscribe .metadata__userIcon .metadata__channelinfo p {
+    font-size: 9px;
+  }
+  .metadata .metadata__subscribe .metadata__subscribeButton button {
+    padding: 4px 4px;
+    font-size: 8px;
+    margin-left: 4px;
+  }
+  .metadata .metadata__text {
+    margin-left: 32px;
+  }
+  .metadata .metadata__text .metadata__alltext {
+    font-size: 9px;
+  }
+}
 /*# sourceMappingURL=MetaData.css.map */

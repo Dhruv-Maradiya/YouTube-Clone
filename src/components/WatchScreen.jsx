@@ -10,7 +10,11 @@ import { getVideosById } from "../redux/actions/videos.actions"
 import { getRelatedVideo } from "../redux/actions/relatedVideo.action"
 
 const WatchScreen = () => {
-    const { width, ref } = useResizeDetector();
+    const { width, ref } = useResizeDetector({
+        onResize: () => {
+            document.getElementById("watchScreen__iframe").style.height = `${document.getElementById("watchScreen__iframe").offsetWidth / (1190 / 669)}px`;
+        }
+    });
     const dispatch = useDispatch();
     const { id } = useParams();
     const { videos, loadingRelated } = useSelector(state => state.relatedVideos);
@@ -29,7 +33,7 @@ const WatchScreen = () => {
         return (
             <div className="watchScreen" ref={ref} style={watchScreenStyle} >
                 <div className="watchScreen__player">
-                    <iframe title={video?.snippet?.title} src={`https://www.youtube.com/embed/${id}`} frameBorder="0" title="video" allowFullScreen width="100%" height="100%"></iframe>
+                    <iframe id="watchScreen__iframe" title={video?.snippet?.title} src={`https://www.youtube.com/embed/${id}`} frameBorder="0" title="video" allowFullScreen width="100%" height="100%"></iframe>
                     {!loading && video ? <MetaData video={video} id={id} /> : null}
                     <hr />
                     <Comments id={id} />
@@ -48,8 +52,8 @@ const WatchScreen = () => {
         }
         return (
             <div className="watchScreen" style={watchScreenStyle} ref={ref} >
-                <div className="watchScreen__player">
-                    <iframe title={video?.snippet?.title} src={`https://www.youtube.com/embed/${id}`} frameBorder="0" title="video" allowFullScreen width="100%" height="100%"></iframe>
+                <div className="watchScreen__player" style={{ minWidth: "unset" }}>
+                    <iframe id="watchScreen__iframe" title={video?.snippet?.title} src={`https://www.youtube.com/embed/${id}`} frameBorder="0" title="video" allowFullScreen width="100%" height="100%"></iframe>
                     {!loading && video ? <MetaData video={video} id={id} /> : null}
                     <hr />
                 </div>

@@ -10,7 +10,7 @@ const Comment = ({ comment }) => {
     const { authorProfileImageUrl, authorDisplayName, publishedAt, textDisplay, likeCount } = comment.snippet.topLevelComment.snippet;
     return (
         <div className="comment__comment">
-            <Avatar src={authorProfileImageUrl} />
+            <Avatar className="comment__avatar" src={authorProfileImageUrl} />
             <div className="comment__commentInfo">
                 <h5>{authorDisplayName} <span>{moment(publishedAt).fromNow()}</span></h5>
                 <p id={comment.id}></p>

@@ -35,7 +35,7 @@
 }
 
 .comments .comment__input form input {
-  min-width: 800px;
+  min-width: 60vw;
   width: 100% !important;
 }
 
@@ -94,5 +94,81 @@
   font-size: 13px;
   margin-right: 20px;
   margin-left: 8px;
+}
+
+@media only screen and (min-width: 450px) and (max-width: 599px) {
+  .comments .comment__input {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    width: 100%;
+  }
+  .comments .comment__input .comment__avatar {
+    height: 35px;
+    width: 35px;
+  }
+  .comments .comment__allComments .comment__comment {
+    margin-bottom: 18px;
+  }
+  .comments .comment__allComments .comment__comment .comment__avatar {
+    height: 35px;
+    width: 35px;
+  }
+  .comments .comment__allComments .comment__comment .comment__commentInfo {
+    margin-left: 18px;
+  }
+  .comments .comment__allComments .comment__comment .comment__commentInfo h5 {
+    font-size: 13px;
+    margin-bottom: 7px;
+  }
+  .comments .comment__allComments .comment__comment .comment__commentInfo h5 span {
+    font-weight: 400;
+    margin-left: 8px;
+  }
+  .comments .comment__allComments .comment__comment .comment__commentInfo p {
+    margin-bottom: 8px;
+    font-size: 13.5px;
+  }
+}
+
+@media only screen and (min-width: 300px) and (max-width: 449px) {
+  .comments .comment__input {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    width: 100%;
+  }
+  .comments .comment__input .comment__avatar {
+    height: 30px;
+    width: 30px;
+  }
+  .comments .comment__allComments .comment__comment {
+    margin-bottom: 18px;
+  }
+  .comments .comment__allComments .comment__comment .comment__avatar {
+    height: 30px;
+    width: 30px;
+  }
+  .comments .comment__allComments .comment__comment .comment__commentInfo {
+    margin-left: 16px;
+  }
+  .comments .comment__allComments .comment__comment .comment__commentInfo h5 {
+    font-size: 11px;
+    margin-bottom: 5px;
+  }
+  .comments .comment__allComments .comment__comment .comment__commentInfo h5 span {
+    font-weight: 400;
+    margin-left: 8px;
+  }
+  .comments .comment__allComments .comment__comment .comment__commentInfo p {
+    margin-bottom: 8px;
+    font-size: 12px;
+  }
 }
 /*# sourceMappingURL=comments.css.map */

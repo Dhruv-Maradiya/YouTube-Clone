@@ -23,7 +23,7 @@ const Comments = ({ id }) => {
                 <SortIcon className="comment__sorticon" /> Sort By
             </div>
             <div className="comment__input">
-                <Avatar src={url} />
+                <Avatar src={url} className="comment__avatar" />
                 <form onSubmit={submitComment}>
                     <TextField id="standard-basic" label="Add public comment" />
                 </form>
