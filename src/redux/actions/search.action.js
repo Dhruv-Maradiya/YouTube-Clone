@@ -5,7 +5,7 @@ import {
   SEARCH_VIDEO_SUCCESS,
 } from "../actionTypes";
 
-export const getVideosByKeyword = (keyword) => async (dispatch) => {
+export const getVideosByKeyword = (keyWord) => async (dispatch, getState) => {
   try {
     dispatch({
       type: SEARCH_VIDEO_REQUEST,
@@ -13,14 +13,21 @@ export const getVideosByKeyword = (keyword) => async (dispatch) => {
     const { data } = await request("/search", {
       params: {
         part: "snippet",
-        q: keyword,
-        maxResults: 300,
+        q: keyWord,
+        maxResults: 20,
         type: "video",
+        pageToken: getState().searchVideo.nextPageToken,
       },
     });
+    console.log(data);
     dispatch({
       type: SEARCH_VIDEO_SUCCESS,
-      payload: data.items,
+      payload: { data, keyWord },
+      payload: {
+        keyWord: keyWord,
+        items: data.items,
+        nextPageToken: data.nextPageToken,
+      },
     });
   } catch (error) {
     console.log(error.message);

@@ -19,8 +19,8 @@ const Header = ({ toggledrawer }) => {
     const [url, setUrl] = useState(null)
     const dispatch = useDispatch();
     const searchVideos = () => {
-        dispatch(getVideosByKeyword(value));
-        history.push("/search");
+        // dispatch(getVideosByKeyword(value));
+        history.push(`/search/${value}`);
     }
     const auth = useSelector(state => state.auth);
     useEffect(() => {

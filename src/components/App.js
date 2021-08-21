@@ -51,7 +51,7 @@ function App() {
         <Route exact path="/watch/:id">
           <Window Screen={WatchScreen} />
         </Route>
-        <Route exact path="/search">
+        <Route exact path="/search/:keyWord">
           <Window Screen={Search} home />
         </Route>
         <Redirect to="/" />

@@ -23,11 +23,11 @@ const Recommended = () => {
     return (
         <div className="recommended">
             <CategoryBar />
-            <InfiniteScroll dataLength={videos.length} next={fetchData} hasMore={true} loader={<div></div>}>
+            <InfiniteScroll dataLength={videos.length} next={fetchData} hasMore={true} loader={<div></div>} >
                 <div className="recommended__videos">
-                    {videos.map((video) => {
+                    {videos ? videos.map((video) => {
                         return <Video video={video} key={video.id} />
-                    })}
+                    }) : null}
                 </div>
             </InfiniteScroll>
         </div>

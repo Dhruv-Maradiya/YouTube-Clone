@@ -8,6 +8,8 @@ export const searchVideoByKeywordReducer = (
   state = {
     loadingSearch: false,
     videos: null,
+    nextPageToken: null,
+    keyWord: null,
   },
   action
 ) => {
@@ -19,16 +21,22 @@ export const searchVideoByKeywordReducer = (
         loadingSearch: true,
       };
     case SEARCH_VIDEO_SUCCESS:
+      // console.log([...state.videos, payload.data.items]);
       return {
         ...state,
         loadingSearch: false,
-        videos: payload,
+        videos:
+          payload.keyWord === state.keyWord
+            ? [...state.videos, ...payload.items]
+            : payload.items,
+        nextPageToken: payload.nextPageToken,
+        keyWord: payload.keyWord,
       };
     case SEARCH_VIDEO_FAIL:
       return {
         ...state,
         loadingSearch: false,
-        error: payload,
+        error: payload.data,
       };
 
     default:
