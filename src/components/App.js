@@ -36,7 +36,7 @@ function App() {
   const { accessToken, loading } = useSelector((state) => state.auth);
   useEffect(() => {
     if (!accessToken && !loading) {
-      // history.push("/login");
+      history.push("/login");
     }
   }, [accessToken, loading, history]);
   return (

@@ -63,11 +63,11 @@ const Header = ({ toggledrawer }) => {
                 <IconButton onClick={() => { toggledrawer() }}>
                     <MenuIcon className="header__menuIcon" />
                 </IconButton>
-                <img className="header__logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_(2015-2017).svg/1280px-Logo_of_YouTube_(2015-2017).svg.png" alt="logo" />
+                <img onClick={() => { history.push("/") }} className="header__logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_(2015-2017).svg/1280px-Logo_of_YouTube_(2015-2017).svg.png" alt="logo" />
             </div>
             <div className="header__input">
                 <div className="header__inputArea">
-                    <input value={value} type="text" placeholder="Search" onChange={e => setValue(e.target.value)} />
+                    <input value={value} type="text" placeholder="Search" onChange={e => setValue(e.target.value)} onKeyPress={(event) => { if (event.key === "Enter") { searchVideos() } }} />
                     <SearchIcon className="header__inputButton" onClick={searchVideos} />
                 </div>
                 <IconButton>

@@ -14,7 +14,7 @@ export const getVideosByKeyword = (keyWord) => async (dispatch, getState) => {
       params: {
         part: "snippet",
         q: keyWord,
-        maxResults: 20,
+        maxResults: 50,
         type: "video",
         pageToken: getState().searchVideo.nextPageToken,
       },

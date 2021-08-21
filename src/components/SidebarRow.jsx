@@ -11,6 +11,8 @@ const SidebarRow = ({ drawer, selected, title, Icon, hideonsmalldevice }) => {
         if (title === "Log Out") {
             dispatch(log_out());
             history.push("/login");
+        } else if (title === "Home") {
+            history.push("/");
         }
     }
     return (
